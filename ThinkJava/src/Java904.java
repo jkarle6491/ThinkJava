@@ -1,13 +1,11 @@
 
 public class Java904 {
-
 	public static void main(String[] args) {
-		String s = "sdgdzg";
-		System.out.println(first(s));
-		System.out.println(rest(s));
-		System.out.println(middle(s));
-		System.out.println(length(s));
-		printString(s, length(s));
+		String s = "wedgghggdew";
+		printString(s);
+		printBackward(s);
+		reverseString(s);
+		System.out.println(isPalindrome(s));
 	}
 
 	public static char first(String s) {
@@ -26,7 +24,32 @@ public class Java904 {
 		return s.length();
 	}
 
-	public static void printString(String s, int l) {
-		System.out.println(s);
+	public static void printString(String s) {
+		for (int x = 0; x < s.length(); x++) {
+			System.out.println(s.charAt(x));
+		}
+	}
+
+	public static void printBackward(String s) {
+		for (int x = s.length() - 1; x > -1; x--) {
+			System.out.println(s.charAt(x));
+		}
+	}
+
+	public static void reverseString(String s) {
+		for (int x = s.length() - 1; x > -1; x--) {
+			System.out.print(s.charAt(x));
+		}
+		System.out.println("");
+	}
+
+	public static boolean isPalindrome(String s) {
+		for (int x = s.length() - 1; x > -1; x--) {
+			if (s.charAt(0) == s.charAt(s.length() - 1)) {
+				return true;
+			}
+		}
+		return false;
+
 	}
 }
